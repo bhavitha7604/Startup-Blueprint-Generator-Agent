@@ -1,0 +1,91 @@
+{
+  "name": "startup-blueprint-generator-agent",
+  "version": "1.0.0",
+  "description": "An Agentic AI system that transforms any raw startup idea into a complete, investor-ready business blueprint using RAG, LangFlow, and IBM Granite models.",
+  "problem_statement": "IBM SkillsBuild AICTE 2026 - Problem Statement No. 20",
+  "domain": "Entrepreneurship / Startup Ecosystem / Agentic AI",
+
+  "tech_stack": {
+    "orchestration": "LangFlow",
+    "llm": "IBM Granite (ibm-granite-3-2-8b-instruct)",
+    "platform": "IBM watsonx.ai",
+    "cloud": "IBM Cloud Lite",
+    "rag_pipeline": "Retrieval-Augmented Generation (RAG)",
+    "vector_db": "FAISS / Chroma",
+    "frontend": "Streamlit / React"
+  },
+
+  "agents": [
+    {
+      "name": "Market Intelligence Agent",
+      "role": "Retrieves and summarizes market size, trends, and competitor data using RAG"
+    },
+    {
+      "name": "Funding & Grants Agent",
+      "role": "Retrieves MSME schemes, angel networks, VCs, and government grants"
+    },
+    {
+      "name": "Legal & Compliance Agent",
+      "role": "Identifies business registration steps, IP filing, and regulatory requirements"
+    },
+    {
+      "name": "Blueprint Composer Agent",
+      "role": "Synthesizes all agent outputs into BMC, GTM plan, budget, and investor pitch summary"
+    }
+  ],
+
+  "langflow_components": [
+    "Chat Input",
+    "IBM watsonx AI Agent",
+    "IBM Granite Model (ibm-granite-3-2-8b-instruct)",
+    "RAG Retriever",
+    "File / Knowledge Base Component",
+    "Chat Output"
+  ],
+
+  "output_deliverables": [
+    "Business Model Canvas (BMC)",
+    "Go-to-Market Strategy",
+    "Estimated Budget Plan",
+    "Investor Pitch Summary"
+  ],
+
+  "ibm_cloud": {
+    "runtime": "python-3.11",
+    "memory": "512M",
+    "disk": "1024M",
+    "instances": 1,
+    "buildpack": "python_buildpack"
+  },
+
+  "environment_variables": {
+    "WATSONX_API_KEY": "<your-ibm-watsonx-api-key>",
+    "WATSONX_PROJECT_ID": "<your-ibm-watsonx-project-id>",
+    "WATSONX_URL": "https://us-south.ml.cloud.ibm.com",
+    "GRANITE_MODEL_ID": "ibm/granite-3-2-8b-instruct",
+    "LANGFLOW_API_KEY": "<your-langflow-api-key>"
+  },
+
+  "repository": {
+    "github": "<your-github-repo-url>",
+    "required_files": [
+      "app.json",
+      "startup_blueprint_agent.pdf",
+      "startup_blueprint_agent_flow.json",
+      "project_presentation.pptx"
+    ]
+  },
+
+  "team": {
+    "name": "<Your Team Name>",
+    "college": "<Your College Name>",
+    "guide": "<Mentor/Guide Name>",
+    "members": [
+      {
+        "name": "<Student Name 1>",
+        "email": "<email1@example.com>",
+        "mobile": "<+91-XXXXXXXXXX>"
+      }
+    ]
+  }
+}
